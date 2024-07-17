@@ -80,13 +80,8 @@ const CustomForm: React.FC = () => {
       className="bg-white min-w-[500px] shadow-lg p-7 border-t rounded-lg"
       onSubmit={handleSubmit}
     >
-      <p className="text-[#253F6F] font-bold mb-1  text-[18px]">
-        We are happy to see you in our platform !
-      </p>
-      <p className="text-[#253F6F] font-bold  text-[18px] mb-7">
-        Enter your phone number to complete the referral
-      </p>
-      <p className="text-[#1D3055] font-[500] mb-3">
+      
+      <p className="text-[#1D3055] font-bold mb-3">
         Please confirm your phone number
       </p>
       <div className="flex items-center gap-1">
