@@ -1,5 +1,3 @@
-
-
 "use client";
 import React, { useState, useCallback, useEffect } from "react";
 import { useRouter } from "next/navigation";
@@ -82,11 +80,15 @@ const CustomForm: React.FC = () => {
       className="bg-white min-w-[500px] shadow-lg p-7 border-t rounded-lg"
       onSubmit={handleSubmit}
     >
-      <p className="text-[#253F6F] mb-7">
-        We are happy to see you in our platform <br /> Enter your phone number
-        to complete a referral
+      <p className="text-[#253F6F] font-bold mb-1  text-[18px]">
+        We are happy to see you in our platform !
       </p>
-      <p className="text-[#253F6F] mb-3">Your phone number</p>
+      <p className="text-[#253F6F] font-bold  text-[18px] mb-7">
+        Enter your phone number to complete the referral
+      </p>
+      <p className="text-[#1D3055] font-[500] mb-3">
+        Please confirm your phone number
+      </p>
       <div className="flex items-center gap-1">
         <select
           id="countryCode"
@@ -108,7 +110,7 @@ const CustomForm: React.FC = () => {
           onChange={handleNumberChange}
           placeholder="Phone Number"
           className={`text-[#253F6F] border-primary-neutral-300 focus-visible:ring-primary-brand-400 flex h-11 w-full rounded-md border-[1.5px] bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 ${
-            !isNumberValid && phoneNumber.length>0 ? "border-red-500" : ""
+            !isNumberValid && phoneNumber.length > 0 ? "border-red-500" : ""
           }`}
         />
       </div>
@@ -122,13 +124,15 @@ const CustomForm: React.FC = () => {
           className="focus-visible:ring-primary-brand-600 peer-checked:bg-[#253F6F] data-[state=checked]:text-primary-base-white  h-4 w-4 shrink-0  border rounded-md border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50"
         />
         <label htmlFor="termsCheckbox" className="text-[#253F6F] ml-3 mb-4">
-          I agree to the terms and conditions
+          I agree to receive sms related to this referral
         </label>
       </div>
 
       <div>
         <button
           className={`mt-7 flex justify-center items-center ${
+            isLoading ? "bg-blue-300" : "bg-[#4472CA]"
+          } ${
             isChecked && phoneNumber.length > 0 && isNumberValid
               ? "bg-[#4472CA]"
               : "bg-blue-300"
