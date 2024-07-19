@@ -80,7 +80,6 @@ const CustomForm: React.FC = () => {
       className="bg-white min-w-[500px] shadow-lg p-7 border-t rounded-lg"
       onSubmit={handleSubmit}
     >
-      
       <p className="text-[#1D3055] font-bold mb-3">
         Please confirm your phone number
       </p>
@@ -119,7 +118,7 @@ const CustomForm: React.FC = () => {
           className="focus-visible:ring-primary-brand-600 peer-checked:bg-[#253F6F] data-[state=checked]:text-primary-base-white  h-4 w-4 shrink-0  border rounded-md border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50"
         />
         <label htmlFor="termsCheckbox" className="text-[#253F6F] ml-3 mb-4">
-          I agree to receive sms related to this referral
+          I agree to receive SMS messages related to this referral
         </label>
       </div>
 
